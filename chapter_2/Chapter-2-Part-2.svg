@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 750 527.5" style="enable-background:new 0 0 750 527.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:square;stroke-miterlimit:10;}
+	.st4{fill:#DAE2F2;fill-opacity:0;}
+	.st5{font-family:'Arial-BoldMT';}
+	.st6{font-size:24.92px;}
+	.st7{font-size:32.04px;}
+	.st8{font-size:49.84px;}
+	.st9{stroke:#000000;stroke-width:2.98;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st10{stroke:#000000;stroke-width:4;stroke-linecap:square;stroke-miterlimit:10;}
+	.st11{stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st12{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st13{stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st14{font-size:35.6px;}
+	.st15{font-size:21.36px;}
+	.st16{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+	.st17{fill:none;stroke:#000000;stroke-width:4;}
+	.st18{fill:none;stroke:#000000;stroke-width:2.16;}
+</style>
+<g transform=" scale(0.89) translate(-501.3325,78.25999999999999)">
+	<rect x="828.8" y="179.6" pointer-events="none" width="4" height="4"/>
+	<rect x="828.8" y="279.6" pointer-events="none" width="4" height="4"/>
+	<rect x="828.8" y="179.6" pointer-events="none" width="4" height="4"/>
+	<rect x="828.8" y="279.6" pointer-events="none" width="4" height="4"/>
+	<path pointer-events="none" class="st0" d="M794.8,224.6c72,0,72,0,72,0"/>
+	<path pointer-events="none" class="st0" d="M812.8,239.6c36,0,36,0,36,0"/>
+	<path pointer-events="none" class="st1" d="M830.8,183.6v40"/>
+	<path pointer-events="none" class="st1" d="M830.8,239.6v40"/>
+	<path pointer-events="none" class="st2" d="M794.8,203.6c20,0,20,0,20,0"/>
+	<path pointer-events="none" class="st2" d="M804.8,193.6c0,20,0,20,0,20"/>
+	<path pointer-events="none" class="st0" d="M794.8,224.6c72,0,72,0,72,0"/>
+	<path pointer-events="none" class="st0" d="M812.8,239.6c36,0,36,0,36,0"/>
+	<path pointer-events="none" class="st3" d="M830.8,183.6v40"/>
+	<path pointer-events="none" class="st3" d="M830.8,239.6v40"/>
+	<path pointer-events="none" class="st2" d="M794.8,203.6c20,0,20,0,20,0"/>
+	<path pointer-events="none" class="st2" d="M804.8,193.6c0,20,0,20,0,20"/>
+	<rect x="910.8" y="201.6" pointer-events="none" class="st4" width="26" height="26"/>
+	<g>
+		<text transform="matrix(1.1236 0 0 1.1236 906.663 224.5731)" class="st5 st6">5V</text>
+	</g>
+	<rect x="570.8" y="261.6" pointer-events="none" class="st4" width="118" height="28"/>
+	<g>
+		<text transform="matrix(1.1236 0 0 1.1236 532.808 289.5727)" class="st5 st7">(digital pin)</text>
+	</g>
+	<rect x="590.8" y="161.6" pointer-events="none" class="st4" width="76" height="26"/>
+	<g>
+		<text transform="matrix(1.1236 0 0 1.1236 521.476 198.5735)" class="st5 st8">Arduino</text>
+	</g>
+	<rect x="1148.8" y="299.6" pointer-events="none" width="4" height="4"/>
+	<rect x="1148.8" y="179.6" pointer-events="none" width="4" height="4"/>
+	<path pointer-events="none" class="st0" d="M1134.8,257.1c44,0,32,0,32,0"/>
+	<path pointer-events="none" class="st9" d="M1150.5,256.5c0,0,0,0-15.7-29.4c31.4,0,31.4,0,31.4,0L1150.5,256.5z"/>
+	<path pointer-events="none" class="st10" d="M1150.8,299.6v-116"/>
+	<path pointer-events="none" class="st11" d="M1187.3,264l8.5-8.5l5.7,14.1L1187.3,264z"/>
+	<path pointer-events="none" class="st12" d="M1178.8,247.1l17,17"/>
+	<path pointer-events="none" class="st13" d="M1183.9,286.1l8.5-8.5l5.7,14.1L1183.9,286.1z"/>
+	<path pointer-events="none" class="st12" d="M1175.4,269.1l17,17"/>
+	<rect x="1250.8" y="261.6" pointer-events="none" class="st4" width="46" height="28"/>
+	<g>
+		<text transform="matrix(1.1236 0 0 1.1236 1233.7861 291.573)" class="st5 st14">LED</text>
+	</g>
+	<rect x="1050.8" y="281.6" pointer-events="none" class="st4" width="86" height="28"/>
+	<g>
+		<text transform="matrix(1.1236 0 0 1.1236 1047.7784 303.5727)" class="st5 st15">cathode</text>
+	</g>
+	<rect x="1050.8" y="181.6" pointer-events="none" class="st4" width="66" height="28"/>
+	<g>
+		<text transform="matrix(1.1236 0 0 1.1236 1048.4489 203.5726)" class="st5 st15">anode</text>
+	</g>
+	<rect x="1048.8" y="419.6" pointer-events="none" width="4" height="4"/>
+	<rect x="928.8" y="419.6" pointer-events="none" width="4" height="4"/>
+	<path pointer-events="none" class="st12" d="M1026.8,421.6l-6,14l-6-14"/>
+	<path pointer-events="none" class="st12" d="M1014.8,421.6l-6-14l-6,14"/>
+	<path pointer-events="none" class="st12" d="M1002.8,421.6l-6,14l-6-14"/>
+	<path pointer-events="none" class="st12" d="M990.8,421.6l-6-14l-6,14"/>
+	<path pointer-events="none" class="st12" d="M978.8,421.6l-6,14l-6-14"/>
+	<path pointer-events="none" class="st12" d="M966.8,421.6l-6-14l-6,14"/>
+	<path pointer-events="none" class="st10" d="M1048.8,421.6h-20"/>
+	<path pointer-events="none" class="st10" d="M952.8,421.6h-20"/>
+	<rect x="962.8" y="461.6" pointer-events="none" class="st4" width="80" height="26"/>
+	<g>
+		<text transform="matrix(1.1236 0 0 1.1236 922.7576 490.5734)" class="st5 st14">Resistor</text>
+	</g>
+	<path pointer-events="none" class="st16" d="M1150.8,301.6v120h-100"/>
+	<path pointer-events="none" class="st16" d="M930.8,421.6h-100v-140"/>
+	<rect x="1048.8" y="39.6" pointer-events="none" width="4" height="4"/>
+	<rect x="928.8" y="39.6" pointer-events="none" width="4" height="4"/>
+	<ellipse pointer-events="none" class="st17" cx="1025.8" cy="41.6" rx="4" ry="4"/>
+	<rect x="952.1" y="25.8" pointer-events="none" class="st18" width="77.8" height="1.9"/>
+	<ellipse pointer-events="none" class="st17" cx="955.8" cy="41.6" rx="4" ry="4"/>
+	<path pointer-events="none" class="st3" d="M1031.8,41.6h17"/>
+	<path pointer-events="none" class="st3" d="M932.8,41.6h17"/>
+	<path pointer-events="none" class="st3" d="M991-7c0,31.8,0,31.8,0,31.8"/>
+	<rect x="918.8" y="61.6" pointer-events="none" class="st4" width="138" height="26"/>
+	<g>
+		<text transform="matrix(1.1236 0 0 1.1236 905.7731 82.5733)" class="st5 st15">normally open</text>
+	</g>
+	<rect x="950.8" y="-58.4" pointer-events="none" class="st4" width="64" height="26"/>
+	<g>
+		<text transform="matrix(1.1236 0 0 1.1236 918.3334 -29.4275)" class="st5 st14">Switch</text>
+	</g>
+	<path pointer-events="none" class="st16" d="M830.8,181.6v-140h100"/>
+	<path pointer-events="none" class="st16" d="M1150.8,181.6v-140h-100"/>
+</g>
+</svg>
