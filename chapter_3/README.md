@@ -1,4 +1,4 @@
-# Techshop EEE-201: Basic programming
+# Techshop EEE-105-Arduino-1: Basic programming
 
 ## Chapter 3
 
@@ -16,10 +16,10 @@ Up to this point, we've seen how to use the serial monitor and how to control th
 
 ## Part 1 - analog input
 
-In [Chapter 2](https://github.com/techshop/EEE-201/tree/master/chapter_2) we used the **output** of a digital pin to control the blinking of a LED; in this first part we are going to be looking at inputs.  But not just any type of input, we're going to be using an analog input.  Previously, we see that we could set the digital pin to either `HIGH` or `LOW`; that is, it could be set to only two values.  An analog pin is different in that it can have many values, in our case, 1024 to be exact!  Let's begin with an example; the circuit we want is shown below, and the sketch your after is [AnalogInput.ino](https://github.com/techshop/EEE-201/blob/master/chapter_3/AnalogInput.ino).
+In [Chapter 2](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_2) we used the **output** of a digital pin to control the blinking of a LED; in this first part we are going to be looking at inputs.  But not just any type of input, we're going to be using an analog input.  Previously, we see that we could set the digital pin to either `HIGH` or `LOW`; that is, it could be set to only two values.  An analog pin is different in that it can have many values, in our case, 1024 to be exact!  Let's begin with an example; the circuit we want is shown below, and the sketch your after is [AnalogInput.ino](https://github.com/techshop/EEE-105-Arduino-1/blob/master/chapter_3/AnalogInput.ino).
 
 <p align="center">
-    <img src="https://cdn.rawgit.com/techshop/EEE-201/master/chapter_3/Chapter_3-Part_1_bb.svg">
+    <img src="https://cdn.rawgit.com/techshop/EEE-105-Arduino-1/master/chapter_3/Chapter_3-Part_1_bb.svg">
 </p>
 
 Let's break the sketch down by looking at the top part first.
@@ -33,7 +33,7 @@ int sensorValue = 0;
 void setup() {
   // declare the ledPin as an OUTPUT:
   pinMode(ledPin, OUTPUT);
-  // because the analog pins are always INPUT, we 
+  // because the analog pins are always INPUT, we
   // don't have to declare it as such
 }
 ```
@@ -79,7 +79,7 @@ In part 1 we covered analog inputs, but what about analog outpus?  Unfortunately
     <img src="https://www.arduino.cc/en/uploads/Tutorial/pwm.gif">
 </p>
 
-Enough with the theory, let's take a look with a hands on example, upload the [Fade](https://github.com/techshop/EEE-201/blob/master/chapter_3/Fade.ino) sketch to your Aruino.  
+Enough with the theory, let's take a look with a hands on example, upload the [Fade](https://github.com/techshop/EEE-105-Arduino-1/blob/master/chapter_3/Fade.ino) sketch to your Aruino.  
 
 The only new part in this sketch is the use of the `analogWrite()` function (*make sure you set the `ledPin` variable to a digital pin that support PWM such as 10 or 11*):
 ```c
@@ -134,9 +134,9 @@ These allow us to check a single condition in multiple ways; the following opera
 
 > x <  y (x is less than y)  
 
-> x >  y (x is greater than y) 
+> x >  y (x is greater than y)
 
-> x <= y (x is less than or equal to y) 
+> x <= y (x is less than or equal to y)
 
 > x >= y (x is greater than or equal to y)
 
@@ -152,16 +152,16 @@ if (analogVal >= 500)
 
 These allow us to chain multiple comparison operators together through the use of a boolean `AND`, `OR`, or `NOT`.  To exend the above example, let's say we only want to turn the LED on when the `analogVal` is between 500 and 700, we'd write:
 ```c
-if (analogVal >= 500 && analogVal <= 700) 
+if (analogVal >= 500 && analogVal <= 700)
 {
     digitalWrite(ledPin, HIGH); // turn on LED
 }
 ```
 
-Let's get to it!  The circuit you need to build is seen below and the sketch we're going to use is the [FadeIf.ino](https://github.com/techshop/EEE-201/blob/master/chapter_3/FadeIf.ino) sketch.
+Let's get to it!  The circuit you need to build is seen below and the sketch we're going to use is the [FadeIf.ino](https://github.com/techshop/EEE-105-Arduino-1/blob/master/chapter_3/FadeIf.ino) sketch.
 
 <p align="center">
-    <img src="https://cdn.rawgit.com/techshop/EEE-201/master/chapter_3/Chapter_3-Part_3_bb.svg">
+    <img src="https://cdn.rawgit.com/techshop/EEE-105-Arduino-1/master/chapter_3/Chapter_3-Part_3_bb.svg">
 </p>
 
 As you can see in the circuit, we've now hooked up all three color components of the LED:
@@ -191,7 +191,7 @@ void loop() {
   // change the brightness for next time through the loop:
   brightness = brightness + fadeAmount;
 
-  // reverse the direction of the fading 
+  // reverse the direction of the fading
   // when brightest or dullest
   if (brightness <= 0 || brightness >= 255) {
     fadeAmount = -fadeAmount;
@@ -210,7 +210,7 @@ There's a lot going on here, so let's break it down; the code is controlling the
 We begin by reading the analog value on pin A5 and setting it to the variable `analogVal`; you'll notice it's hooked up to the trimpot, so as you adjust it, the `analogVal` will change.  Then we encouter our `if` statement; it's setup to turn the green led (pin `ledG`) ON if the `analogVal` is larger than or equal to 300; otherwise it will turn it off.  So far so good.
 
 **Red LED**
-    
+
 The red LED is a bit more complicated.  We are using PWD (`analogWrite()`) to set the brightness with a variable named `brigthness`.  On our first loop, `brightness` is 0; however, on each loop we adjust the `brigthness` value by adding `fadeAmount` (which equals 5) to it.  BUT! If the `brigthness` is larger than 255 (or less than 0) then we change `fadeAmount` to be the negative of itself.  So, when `fadeAmount` is 5, it would change to -5 and *vice a versa*. What this means, is that on every loop, we change the `brightness` value and thus the PWM duty and thus the brightness of the red LED.
 
 Practically, what this all means is, you should see the red LED slowly getting brighter and then fading AND depending on the value for `analogVal` the green LED will be on or off.  This way you can mix colors!  AND! the blue LED is hooked up to the push button switch so you can manually control it.
@@ -221,4 +221,3 @@ Practically, what this all means is, you should see the red LED slowly getting b
 - How can we see what voltage is being set by the trimpot?
 - How can we make the LED show a white color?  How about purple?
 - How could we turn all three colors on/off with a single pin?
-

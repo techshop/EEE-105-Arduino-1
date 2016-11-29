@@ -1,4 +1,4 @@
-# Techshop EEE-201: Basic programming
+# Techshop EEE-105-Arduino-1: Basic programming
 
 ## Chapter 2
 
@@ -6,7 +6,7 @@ In this chapter, we are going to start building circuits and using our Arduino t
 
 - blinking an LED with `digitalWrite()`
 - variable type `byte`
-- using a normally open (NO) switch 
+- using a normally open (NO) switch
 - using a potentiometer to adjust the brightness of the LED
 
 ## Table of Contents
@@ -24,7 +24,7 @@ In this chapter, we are going to start building circuits and using our Arduino t
 
 ## Introduction
 
-This chapter assumes you are some knowledge of how to read circuit diagrams; if you have never seen one before, head over to the [circuit diagram tutorial](https://github.com/techshop/EEE-201/tree/master/circuit_diagrams) to read all about 'em.
+This chapter assumes you are some knowledge of how to read circuit diagrams; if you have never seen one before, head over to the [circuit diagram tutorial](https://github.com/techshop/EEE-105-Arduino-1/tree/master/circuit_diagrams) to read all about 'em.
 
 #### Current limiting resistors
 
@@ -69,11 +69,11 @@ This is where we can get our voltage from, both as 5V or 3.3V.  We can also get 
 
 **ANALOG**
 
-In the analog section we find 6 pins labeled *A0* to *A5* - these are analog inputs which will be described in [Chapter 3](https://github.com/techshop/EEE-201/tree/master/chapter_3)
+In the analog section we find 6 pins labeled *A0* to *A5* - these are analog inputs which will be described in [Chapter 3](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_3)
 
 **DIGITAL**
 
-In the digital section, we have 14 pins labeled *0* to *13* (there are others but these pins are outside the scope of this class) - these are simple digital pins that we can turn either `HIGH` or `LOW` and will be covered in this chapter.  Notice also that some of the pins have an asterisk by the number; this identifies these pins as supporting pulse width modulation (PWM), whic will be covered in [Chapter 3](https://github.com/techshop/EEE-201/tree/master/chapter_3)
+In the digital section, we have 14 pins labeled *0* to *13* (there are others but these pins are outside the scope of this class) - these are simple digital pins that we can turn either `HIGH` or `LOW` and will be covered in this chapter.  Notice also that some of the pins have an asterisk by the number; this identifies these pins as supporting pulse width modulation (PWM), whic will be covered in [Chapter 3](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_3)
 
 ## Part 1 - simple blink
 
@@ -81,12 +81,12 @@ In the digital section, we have 14 pins labeled *0* to *13* (there are others bu
 
 We start by putting together a simple LED circuit which we will blink on/off with our Arduino.  The circuit you'll put together on your breadboard can be found below; note that the sketch we'll be using assumes you've hooked your LED up to digital pin **8**.
 
-![circuit1](https://cdn.rawgit.com/techshop/EEE-201/master/chapter_2/Chapter-2-Part-1.svg)
+![circuit1](https://cdn.rawgit.com/techshop/EEE-105-Arduino-1/master/chapter_2/Chapter-2-Part-1.svg)
 
 There isn't *one* correct way of putting the circuit together, but many different ways will work!  To help you out, in the image below, we've shown you one way that you might put your circuit together.
 
 <p align="center">
-    <img src="https://cdn.rawgit.com/techshop/EEE-201/master/chapter_2/Chapter_2-Part_1_bb.svg">
+    <img src="https://cdn.rawgit.com/techshop/EEE-105-Arduino-1/master/chapter_2/Chapter_2-Part_1_bb.svg">
 </p>
 
 You should be able to notice a few things with when comparing the image above to the diagram:
@@ -100,12 +100,12 @@ A few important things to remember:
 
 ### Sketch
 
-You'll be using the [Blink sketch](https://github.com/techshop/EEE-201/blob/master/chapter_2/Blink.ino) on the arduino.  Note that the sketch assumes you've hooked your LED up to digital pin **8**.
+You'll be using the [Blink sketch](https://github.com/techshop/EEE-105-Arduino-1/blob/master/chapter_2/Blink.ino) on the arduino.  Note that the sketch assumes you've hooked your LED up to digital pin **8**.
 
-Just like we saw previously in [Chapter 1](https://github.com/techshop/EEE-201/tree/master/chapter_1), our sketch has two parts to is: `setup()` and `loop()`; let's walk through the first part:
+Just like we saw previously in [Chapter 1](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_1), our sketch has two parts to is: `setup()` and `loop()`; let's walk through the first part:
 
 ```c
-// the setup function runs once when you press reset 
+// the setup function runs once when you press reset
 // or power the board
 void setup() {
   // initialize digital pin 8 as an output.
@@ -125,7 +125,7 @@ void loop() {
 }
 ```
 
-If you remember what we learned in [Chapter 1](https://github.com/techshop/EEE-201/tree/master/chapter_1), you should know that whatever is written inside the `loop()` function is, as the name implies, looped or repeated as long as the Arduino is on.  In this case, we use the [`digitalWrite()`](https://www.arduino.cc/en/Reference/DigitalWrite) to turn the pin 8 *on* or `HIGH` - what this means is that the voltage on this pin is turned on to 5V so that current can flow from the pin - this will turn your LED on!  Next, the Arduino interprets the [`delay()`](https://www.arduino.cc/en/Reference/Delay) function; this simply pauses the sketch for the duration defined in the function, in this case it's 1,000 miliseconds (or 1 second).  The next two lines within the `loop()` function are exactly the same except that instead of writing `HIGH` to pin 8, we tell the Arduino to write `LOW` - think of this as turning off the current flow in the pin, setting the voltage to 0V - this will turn your LED off.
+If you remember what we learned in [Chapter 1](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_1), you should know that whatever is written inside the `loop()` function is, as the name implies, looped or repeated as long as the Arduino is on.  In this case, we use the [`digitalWrite()`](https://www.arduino.cc/en/Reference/DigitalWrite) to turn the pin 8 *on* or `HIGH` - what this means is that the voltage on this pin is turned on to 5V so that current can flow from the pin - this will turn your LED on!  Next, the Arduino interprets the [`delay()`](https://www.arduino.cc/en/Reference/Delay) function; this simply pauses the sketch for the duration defined in the function, in this case it's 1,000 miliseconds (or 1 second).  The next two lines within the `loop()` function are exactly the same except that instead of writing `HIGH` to pin 8, we tell the Arduino to write `LOW` - think of this as turning off the current flow in the pin, setting the voltage to 0V - this will turn your LED off.
 
 And that's it!  This sketch will turn your LED on for 1 second, then turn it off for 1 second; this gets repeated forever!
 
@@ -141,9 +141,9 @@ What happens if you'd want to change which pin controls your blinking LED?  That
 // the setup function runs once when you press reset
 // or power the board
 
-// declare a new 'byte' type variable and 
+// declare a new 'byte' type variable and
 // set it to the value 8
-byte ledPin = 8; 
+byte ledPin = 8;
 
 void setup() {
   // initialize digital pin 8 as an output.
@@ -169,19 +169,19 @@ A `byte` stores an 8-bit unsigned number and can range from 0 to 255.  Unsigned 
 Let's make a slight modification to our circuit and add a momentary normally open switch.  The way this switch or button works is that unless you press on it, no connection is made accross the terminals (this is known as normally open or NO)
 
 <p align="center">
-    <img src="https://cdn.rawgit.com/techshop/EEE-201/master/chapter_2/Chapter-2-Part-2.svg">
+    <img src="https://cdn.rawgit.com/techshop/EEE-105-Arduino-1/master/chapter_2/Chapter-2-Part-2.svg">
 </p>
 
 I've updated the layout by adding a switch in the image below and moving the resistor around a bit.
 
 <p align="center">
-    <img src="https://cdn.rawgit.com/techshop/EEE-201/master/chapter_2/Chapter_2-Part_2_bb.svg">
+    <img src="https://cdn.rawgit.com/techshop/EEE-105-Arduino-1/master/chapter_2/Chapter_2-Part_2_bb.svg">
 </p>
 
 Let's also modify our sketch a little bit so that the LED always stays on; change the `setup()` and `loop()` to look like this:
 
 ```c
-// the setup function runs once when you press reset 
+// the setup function runs once when you press reset
 // or power the board
 void setup() {
   // initialize digital pin 8 as an output.
@@ -198,17 +198,17 @@ All we've done here is made the `loop()` empty (so that it doesn't do anything) 
 
 ## Part 3 - adding in a potentiometer
 
-Remember in the Introduction where we introduced the concept of a [current limiting resistor](https://github.com/techshop/EEE-201/tree/master/chapter_2#current-limiting-resistors) and how we mentioned that the size of the resistor will impact the brightness of the LED?  You might want to re-read that section if you don't remember; in any case, we are going to use a potentiometer (also known as a trimpot) to adjust the brightness of our LED.  You can think of a trimpot as a variable resistance resistor; in our case we are using a 10K trimpot which means its resistance varies from 0 to 10,000 ohms.  
+Remember in the Introduction where we introduced the concept of a [current limiting resistor](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_2#current-limiting-resistors) and how we mentioned that the size of the resistor will impact the brightness of the LED?  You might want to re-read that section if you don't remember; in any case, we are going to use a potentiometer (also known as a trimpot) to adjust the brightness of our LED.  You can think of a trimpot as a variable resistance resistor; in our case we are using a 10K trimpot which means its resistance varies from 0 to 10,000 ohms.  
 
 To use the trimpot, adjust your circuit to match the following:
 
-![circuit1](https://cdn.rawgit.com/techshop/EEE-201/master/chapter_2/Chapter-2-Part-3.svg)
+![circuit1](https://cdn.rawgit.com/techshop/EEE-105-Arduino-1/master/chapter_2/Chapter-2-Part-3.svg)
 
 <p align="center">
-    <img src="https://cdn.rawgit.com/techshop/EEE-201/master/chapter_2/Chapter_2-Part_3_bb.svg">
+    <img src="https://cdn.rawgit.com/techshop/EEE-105-Arduino-1/master/chapter_2/Chapter_2-Part_3_bb.svg">
 </p>
 
-You can use either sketch that we've talked about (the [Blink sketch](https://github.com/techshop/EEE-201/blob/master/chapter_2/Blink.ino) or the version where the LED always stays on).  Update your sketch (if needed), and try twisting the trimpot to adjust the brightness of the LED.
+You can use either sketch that we've talked about (the [Blink sketch](https://github.com/techshop/EEE-105-Arduino-1/blob/master/chapter_2/Blink.ino) or the version where the LED always stays on).  Update your sketch (if needed), and try twisting the trimpot to adjust the brightness of the LED.
 
 A few important points to remember:
 - Adding the trimpot doesn't mean we can take out the other resistor!  If we did remove it, and you twisted the trimpot all the way to 0 ohms, you'd blow up your little LED (not literally, but it would break!).

@@ -1,4 +1,4 @@
-# Techshop EEE-201: Basic programming
+# Techshop EEE-105: Arduino 1
 
 ## Chapter 1
 
@@ -32,7 +32,7 @@ You can think of Arduino as a hardware/software package that we can use for all 
 
 ## Part 1 - bare minimum
 
-Let's get started!  Open the Arduino IDE and copy/paste the [BareMinimum.ino](https://github.com/techshop/EEE-201/blob/master/chapter_1/BareMinimum.ino) sketch.  You should see two sections of code, the first looks like:
+Let's get started!  Open the Arduino IDE and copy/paste the [BareMinimum.ino](https://github.com/techshop/EEE-105-Arduino-1/blob/master/chapter_1/BareMinimum.ino) sketch.  You should see two sections of code, the first looks like:
 ```c
 void setup() {
   // put your setup code here, to run once:
@@ -54,7 +54,7 @@ Any line that starts with two slashes (`//`) will not be read by the Arduino, so
 
 ## Part 2 - serial monitor
 
-So far we haven't actually done anything with the Arduino, let's fix that!  We begin with the quintessential [*Hello, World!*](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) example; copy/paste [HelloWorld.ino](https://github.com/techshop/EEE-201/blob/master/chapter_1/HelloWorld.ino) into your IDE.  Next we will want to upload our sketch to the Arduino so that it knows what we want it to do; here's how:
+So far we haven't actually done anything with the Arduino, let's fix that!  We begin with the quintessential [*Hello, World!*](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) example; copy/paste [HelloWorld.ino](https://github.com/techshop/EEE-105-Arduino-1/blob/master/chapter_1/HelloWorld.ino) into your IDE.  Next we will want to upload our sketch to the Arduino so that it knows what we want it to do; here's how:
 
 1. Open the Arduino software (IDE)
 2. Copy and paste your sketch into the window
@@ -68,7 +68,7 @@ If you have any problems uploading your sketch, check these two things:
 
 After uploading has finished, open the serial monitor (*Tools* -> *Serial Monitor*) and you should see something like this:
 <p align="center">
-    <img src="https://raw.githubusercontent.com/techshop/EEE-201/master/chapter_1/monitor.png">
+    <img src="https://raw.githubusercontent.com/techshop/EEE-105-Arduino-1/master/chapter_1/monitor.png">
 </p>
 
 Let's walk through how this works; the first part of our sketch looks like this:
@@ -94,4 +94,3 @@ Remember, the `loop()` just repeats [*Ad nauseam*](https://en.wikipedia.org/wiki
 **Explore**
 
 - what happens if you change the line of code to `Serial.print("Hello, World!")`?
-
