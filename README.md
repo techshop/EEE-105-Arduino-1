@@ -1,5 +1,5 @@
 <p align="right">
-    <img src="https://cdn.rawgit.com/ConstantinoSchillebeeckx/Techshop-EEE-201/master/TS_logo.png">
+    <img src="https://cdn.rawgit.com/ConstantinoSchillebeeckx/Techshop-EEE-105-Arduino-1/master/TS_logo.png">
 </p>
 
 # EEE-105: Arduino 1
@@ -8,25 +8,23 @@ In this class, you will learn how to use an Arduino in simple projects.  We will
 
 This is a fast track class for people who want to add simple automation to their projects. Example programs will be provided. You can cut and paste from the examples to start writing your own programs.
 
-The class fee includes a breadboard, switch, LEDs and various electronic components.
+The class fee includes an Arduino UNO, breadboard, switch, LEDs and various electronic components.
 
-**Prerequisites: You must have an Arduino or Arduino compatible board**
-
-This is Part 2 of the Arduino Electronics Series. Part 1 is building your first Arduino board although you can skip that class and just buy one if you like. Please bring the Arduino board you built in the Arduino Part 1 class and a laptop with the Arduino software and drivers pre-installed. The software may be downloaded [online](https://www.arduino.cc/en/Main/Software).
+This is Part 1 of the Arduino Electronics Series. Please bring a laptop with the Arduino software and drivers pre-installed. The software may be downloaded [online](https://www.arduino.cc/en/Main/Software).
 
 If you bring your own laptop, you **MUST** pre-download and install the Arduino software and drivers.
 
 You must make arrangements for a computer before signing up for the class - either be able to bring a laptop, or call the shop for assistance.
 
-A [GitHub repo](https://github.com/techshop/EEE-201) has been created which houses all of the course material including a [course document PDF](https://github.com/techshop/EEE-201/blob/master/EEE-201.pdf) as well as a [ZIP with all the course material including code](https://github.com/techshop/EEE-201/archive/v1.1.zip).
+A [GitHub repo](https://github.com/techshop/EEE-105-Arduino-1) has been created which houses all of the course material including a [course document PDF](https://github.com/techshop/EEE-105-Arduino-1/blob/master/EEE-105.pdf) as well as a [ZIP with all the course material including code](https://github.com/techshop/EEE-105-Arduino-1/archive/v1.0.zip).
 
 
 ## Course Supplies
 
-You will be working with the supplies listed below.  Please note that you will be given all of the supplies **except for the Educato board, you must provide this yourself**.
+You will be working with **and given** all the supplies listed below.
 
-### 1 x [Educato board](https://moderndevice.com/product/educato/)
-<img src="https://moderndevice.com/wp-content/uploads/2014/03/educato.jpg" width=300 />
+### 1 x [Arduino Uno](http://www.arduino.org/products/boards/arduino-uno)
+<img src="http://www.arduino.org/media/k2/galleries/90/A000073-Arduino-Uno-SMD-1front.jpg" width=300 />
 
 **Note**: any flavor of Arduino board can be used, e.g. [Arduino Uno](https://en.wikipedia.org/wiki/List_of_Arduino_boards_and_compatible_systems)
 
@@ -45,7 +43,7 @@ You will be working with the supplies listed below.  Please note that you will b
 ### 1 x [10K potentiometer](https://www.sparkfun.com/products/9806) 
 <img src="https://cdn.sparkfun.com//assets/parts/3/8/2/3/09806-01.jpg" width=300 />
 
-## [Chapter 1](https://github.com/techshop/EEE-201/tree/master/chapter_1)
+## [Chapter 1](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_1)
 
 Let's get started with Arduino!  In this chapter we are going to cover the most basic parts of getting a [sketch](https://www.arduino.cc/en/Tutorial/Sketch) running; we'll be covering the following topics:
 - `setup()` function
@@ -54,7 +52,7 @@ Let's get started with Arduino!  In this chapter we are going to cover the most 
 - Using comments
 
 
-## [Chapter 2](https://github.com/techshop/EEE-201/tree/master/chapter_2)
+## [Chapter 2](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_2)
 
 Our Arduino examples haven't actually done much yet, let's change that!  In this chapter we will learn how to control the blinking of a small light emitting diode (LED); we'll be covering the following topics:
 - blinking an LED with `digitalWrite()`
@@ -63,14 +61,14 @@ Our Arduino examples haven't actually done much yet, let's change that!  In this
 - using a potentiometer to adjust the brightness of the LED
 
 
-## [Chapter 3](https://github.com/techshop/EEE-201/tree/master/chapter_3)
+## [Chapter 3](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_3)
 
 - Analog input
 - Fading a LED with PWM
 - variable type `int`
 - `if` control structure
 
-## [Appendix](https://github.com/techshop/EEE-201/tree/master/appendix)
+## [Appendix](https://github.com/techshop/EEE-105-Arduino-1/tree/master/appendix)
 
 This appendix will cover the basics of how a breadboards work, will get you familiar with using them and will cover some of the basics of circuit diagrams.
 
