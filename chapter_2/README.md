@@ -58,7 +58,7 @@ You can find a handy [resistor calculator](http://led.linear1.org/1led.wiz) onli
 Before we being using our Arduino, let's get oriented with the board:
 
 <p align="center">
-    <img src="https://cdn.rawgit.com/techshop/EEE-201/master/chapter_2/EducatoOnBreadboard.jpg">
+    <img src="http://www.arduino.org/media/k2/galleries/90/A000073-Arduino-Uno-SMD-1front.jpg" width="300">
 </p>
 
 On the board, we see multiple integraded circuits [(ICs)](https://en.wikipedia.org/wiki/Integrated_circuit) such as resistors, capacitors, LEDs and so on; however most importantly we also find two rows of black, female headers.  These headers, grouped into three main sections (POWER, ANALOG and DIGITAL) will be the primary way we will interface with the arduino.  They are made up of numerous pins that we will be able to control individually with our sketch.
