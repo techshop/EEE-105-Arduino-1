@@ -16,7 +16,7 @@ If you bring your own laptop, you **MUST** pre-download and install the Arduino 
 
 You must make arrangements for a computer before signing up for the class - either be able to bring a laptop, or call the shop for assistance.
 
-A [GitHub repo](https://github.com/techshop/EEE-105-Arduino-1) has been created which houses all of the course material including a [course document PDF](https://github.com/techshop/EEE-105-Arduino-1/blob/master/EEE-105.pdf) as well as a [ZIP with all the course material including code](https://github.com/techshop/EEE-105-Arduino-1/archive/v1.0.zip).
+A [GitHub repo](https://github.com/techshop/EEE-105-Arduino-1) has been created which houses all of the course material including a [course document PDF](https://github.com/techshop/EEE-105-Arduino-1/blob/master/EEE-105.pdf) as well as a [ZIP with all the course material including code](https://github.com/techshop/EEE-105-Arduino-1/archive/v1.1.zip).
 
 
 ## Course Supplies

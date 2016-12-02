@@ -1,6 +1,4 @@
-# Techshop EEE-105: Arduino 1
-
-## Chapter 1
+## EEE-105 Chapter 1
 
 Welcome to chapter 1!  Let's get started learning the basics of how to use an Arduino.  In this chapter, we will cover the following topics:
 

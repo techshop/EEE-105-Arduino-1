@@ -1,6 +1,4 @@
-# Techshop EEE-105-Arduino-1: Basic programming
-
-## Chapter 2
+## EEE-105 Chapter 2
 
 In this chapter, we are going to start building circuits and using our Arduino to control those circuits; we will be covering the following topics in this chapter:
 
@@ -51,7 +49,7 @@ Also, keep in mind these two concepts when referring to the circuit above:
 1. The current, `i`, coming out of the power source, through the resistor and LED, and back to ground is the same [KCL](http://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws#Kirchhoff.27s_current_law_.28KCL.29)
 2. The voltage drop across the resistor, in addition to the forward voltage drop of the LED equals the supply voltage [KVL](http://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws#Kirchhoff.27s_voltage_law_.28KVL.29)
 
-You can find a handy [resistor calculator](http://led.linear1.org/1led.wiz) online which will tell you exactly which resistor you should be using for your ciruit!  When in doubt, always use a larger resistor than necessary because if you don't, you risk burning up the LED.  In general, using a very large resistor will dim your LED; as you reduce the resistance, your LED will become brighter.
+You can find a handy [resistor calculator](http://led.linear1.org/1led.wiz) online which will tell you exactly which resistor you should be using for your circuit!  When in doubt, always use a larger resistor than necessary because if you don't, you risk burning up the LED.  In general, using a very large resistor will dim your LED; as you reduce the resistance, your LED will become brighter.
 
 #### Header pins
 
@@ -61,7 +59,7 @@ Before we being using our Arduino, let's get oriented with the board:
     <img src="http://www.arduino.org/media/k2/galleries/90/A000073-Arduino-Uno-SMD-1front.jpg" width="300">
 </p>
 
-On the board, we see multiple integraded circuits [(ICs)](https://en.wikipedia.org/wiki/Integrated_circuit) such as resistors, capacitors, LEDs and so on; however most importantly we also find two rows of black, female headers.  These headers, grouped into three main sections (POWER, ANALOG and DIGITAL) will be the primary way we will interface with the arduino.  They are made up of numerous pins that we will be able to control individually with our sketch.
+On the board, we see multiple integrated circuits [(ICs)](https://en.wikipedia.org/wiki/Integrated_circuit) such as resistors, capacitors, LEDs and so on; however most importantly we also find two rows of black, female headers.  These headers, grouped into three main sections (POWER, ANALOG and DIGITAL) will be the primary way we will interface with the Arduino.  They are made up of numerous pins that we will be able to control individually with our sketch.
 
 **POWER**
 
@@ -73,7 +71,7 @@ In the analog section we find 6 pins labeled *A0* to *A5* - these are analog inp
 
 **DIGITAL**
 
-In the digital section, we have 14 pins labeled *0* to *13* (there are others but these pins are outside the scope of this class) - these are simple digital pins that we can turn either `HIGH` or `LOW` and will be covered in this chapter.  Notice also that some of the pins have an asterisk by the number; this identifies these pins as supporting pulse width modulation (PWM), whic will be covered in [Chapter 3](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_3)
+In the digital section, we have 14 pins labeled *0* to *13* (there are others but these pins are outside the scope of this class) - these are simple digital pins that we can turn either `HIGH` or `LOW` and will be covered in this chapter.  Notice also that some of the pins have an asterisk by the number; this identifies these pins as supporting pulse width modulation (PWM), which will be covered in [Chapter 3](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_3)
 
 ## Part 1 - simple blink
 
@@ -100,7 +98,7 @@ A few important things to remember:
 
 ### Sketch
 
-You'll be using the [Blink sketch](https://github.com/techshop/EEE-105-Arduino-1/blob/master/chapter_2/Blink.ino) on the arduino.  Note that the sketch assumes you've hooked your LED up to digital pin **8**.
+You'll be using the [Blink sketch](https://github.com/techshop/EEE-105-Arduino-1/blob/master/chapter_2/Blink.ino) on the Arduino.  Note that the sketch assumes you've hooked your LED up to digital pin **8**.
 
 Just like we saw previously in [Chapter 1](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_1), our sketch has two parts to is: `setup()` and `loop()`; let's walk through the first part:
 
@@ -125,7 +123,7 @@ void loop() {
 }
 ```
 
-If you remember what we learned in [Chapter 1](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_1), you should know that whatever is written inside the `loop()` function is, as the name implies, looped or repeated as long as the Arduino is on.  In this case, we use the [`digitalWrite()`](https://www.arduino.cc/en/Reference/DigitalWrite) to turn the pin 8 *on* or `HIGH` - what this means is that the voltage on this pin is turned on to 5V so that current can flow from the pin - this will turn your LED on!  Next, the Arduino interprets the [`delay()`](https://www.arduino.cc/en/Reference/Delay) function; this simply pauses the sketch for the duration defined in the function, in this case it's 1,000 miliseconds (or 1 second).  The next two lines within the `loop()` function are exactly the same except that instead of writing `HIGH` to pin 8, we tell the Arduino to write `LOW` - think of this as turning off the current flow in the pin, setting the voltage to 0V - this will turn your LED off.
+If you remember what we learned in [Chapter 1](https://github.com/techshop/EEE-105-Arduino-1/tree/master/chapter_1), you should know that whatever is written inside the `loop()` function is, as the name implies, looped or repeated as long as the Arduino is on.  In this case, we use the [`digitalWrite()`](https://www.arduino.cc/en/Reference/DigitalWrite) to turn the pin 8 *on* or `HIGH` - what this means is that the voltage on this pin is turned on to 5V so that current can flow from the pin - this will turn your LED on!  Next, the Arduino interprets the [`delay()`](https://www.arduino.cc/en/Reference/Delay) function; this simply pauses the sketch for the duration defined in the function, in this case it's 1,000 milliseconds (or 1 second).  The next two lines within the `loop()` function are exactly the same except that instead of writing `HIGH` to pin 8, we tell the Arduino to write `LOW` - think of this as turning off the current flow in the pin, setting the voltage to 0V - this will turn your LED off.
 
 And that's it!  This sketch will turn your LED on for 1 second, then turn it off for 1 second; this gets repeated forever!
 
@@ -159,14 +157,14 @@ void loop() {
 }
 ```
 
-The LED should blink just like it did before!  All we've done is create a placeholder called `ledPin` and stored the value 8 to it.  Then, whenever we have to refer to the value 8, we can just use the variable `ledPin`.  But what is all this [`byte`](https://www.arduino.cc/en/Reference/Byte) business about?  Well that's the variable type.  In the programming language that Arduino uses, we have to specify how much memory we want to allocate to memory; in this case, we are allocating one variable with the size of a `byte`.  It's like telling the Arduino how much memory we expect to be using; this way the Arduino can check to see if it has enough.  Remember the Arduino does not have a lot of memoery.  
+The LED should blink just like it did before!  All we've done is create a placeholder called `ledPin` and stored the value 8 to it.  Then, whenever we have to refer to the value 8, we can just use the variable `ledPin`.  But what is all this [`byte`](https://www.arduino.cc/en/Reference/Byte) business about?  Well that's the variable type.  In the programming language that Arduino uses, we have to specify how much memory we want to allocate to memory; in this case, we are allocating one variable with the size of a `byte`.  It's like telling the Arduino how much memory we expect to be using; this way the Arduino can check to see if it has enough.  Remember the Arduino does not have a lot of memory.  
 
 A `byte` stores an 8-bit unsigned number and can range from 0 to 255.  Unsigned simply means that it can't be negative; and 8-bit is the same as saying 2 to the power of 8 (which is 255).  You might be wondering, what if I want to store the value 438?  Well, that wouldn't "fit" into a byte, and you'd have to use an [`int`](https://www.arduino.cc/en/Reference/Int) instead.  We'll be covering the other variable types in the future, but for now the `byte` should be all that we need.
 
 
 ## Part 2 - adding in a switch
 
-Let's make a slight modification to our circuit and add a momentary normally open switch.  The way this switch or button works is that unless you press on it, no connection is made accross the terminals (this is known as normally open or NO)
+Let's make a slight modification to our circuit and add a momentary normally open switch.  The way this switch or button works is that unless you press on it, no connection is made across the terminals (this is known as normally open or NO)
 
 <p align="center">
     <img src="https://cdn.rawgit.com/techshop/EEE-105-Arduino-1/master/chapter_2/Chapter-2-Part-2.svg">

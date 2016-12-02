@@ -1,6 +1,4 @@
-# Techshop EEE-105-Arduino-1: Basic programming
-
-## Chapter 3
+## EEE-105 Chapter 3
 
 Up to this point, we've seen how to use the serial monitor and how to control the output of a single digital pin.  There isn't a whole lot we can do with just that, so let's learn some more cool stuff.  In this chapter we're going to read inputs, as well as cover the idea of an analog value; we'll cover the following topics:
 - Analog input
@@ -42,7 +40,7 @@ In the first three lines, we declare three variables, two `byte` types and one [
 
 Bust out the calculator and you'll see that equals 65,536!  However, an `int` is special in that it can hold negative values, in fact an `int` can hold the values -32,768 to 32,767; for those that are observant you can see that 32,767 + 32,768 = 65,535 (can anyone tell me what that isn't exactly equal to 2^16?).  The reason we want to declare the variable `sensorValue` as an `int` is because the range we expect it to be reading from is 0 to 1023 (the range of the analog pins).
 
-In the `setup()` function we see that we are setting the `ledPin` (pin 13) as an `OUTPUT`.  Note that we don't have to define the analog pin as an input because it can only act asn an input.  Let's move on to the interesting parts:
+In the `setup()` function we see that we are setting the `ledPin` (pin 13) as an `OUTPUT`.  Note that we don't have to define the analog pin as an input because it can only act as an input.  Let's move on to the interesting parts:
 
 ```c
 void loop() {
@@ -70,7 +68,7 @@ In the `loop()`, we see a function we haven't seen before [`analogRead()`](https
 
 ## Part 2 - PWM digital output
 
-In part 1 we covered analog inputs, but what about analog outpus?  Unfortunately the Arduino can't directly do analog outputs, however we can fake it through the use of the Arudino software through a technique called [pulse width modulation (PWM)](https://www.arduino.cc/en/Tutorial/PWM):
+In part 1 we covered analog inputs, but what about analog outputs?  Unfortunately the Arduino can't directly do analog outputs, however we can fake it through the use of the Arduino software through a technique called [pulse width modulation (PWM)](https://www.arduino.cc/en/Tutorial/PWM):
 > Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED.
 
 > In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to analogWrite() is on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example.
@@ -85,22 +83,22 @@ The only new part in this sketch is the use of the `analogWrite()` function (*ma
 ```c
 void loop() {
   analogWrite(ledPin, 0); // update analog value on ledPin
-  delay(500); // delay 500 miliseconds
+  delay(500); // delay 500 milliseconds
 
   analogWrite(ledPin, 50); // update analog value on ledPin
-  delay(500); // delay 500 miliseconds
+  delay(500); // delay 500 milliseconds
 
   analogWrite(ledPin, 100); // update analog value on ledPin
-  delay(500); // delay 500 miliseconds
+  delay(500); // delay 500 milliseconds
 
   analogWrite(ledPin, 150); // update analog value on ledPin
-  delay(500); // delay 500 miliseconds
+  delay(500); // delay 500 milliseconds
 
   analogWrite(ledPin, 200); // update analog value on ledPin
-  delay(500); // delay 500 miliseconds
+  delay(500); // delay 500 milliseconds
 
   analogWrite(ledPin, 255); // update analog value on ledPin
-  delay(500); // delay 500 miliseconds
+  delay(500); // delay 500 milliseconds
 }
 ```
 
@@ -123,7 +121,7 @@ if (condition is true)
 }
 ```
 
-The condition statment uses *comparison operators* and [*boolean operators*](https://www.arduino.cc/en/Reference/Boolean) to evalute whether a condition is true.  Let's take a look at those.
+The condition statement uses *comparison operators* and [*boolean operators*](https://www.arduino.cc/en/Reference/Boolean) to evaluate whether a condition is true.  Let's take a look at those.
 
 **Comparison operators**
 
@@ -150,7 +148,7 @@ if (analogVal >= 500)
 
 **Boolean operators**
 
-These allow us to chain multiple comparison operators together through the use of a boolean `AND`, `OR`, or `NOT`.  To exend the above example, let's say we only want to turn the LED on when the `analogVal` is between 500 and 700, we'd write:
+These allow us to chain multiple comparison operators together through the use of a boolean `AND`, `OR`, or `NOT`.  To extend the above example, let's say we only want to turn the LED on when the `analogVal` is between 500 and 700, we'd write:
 ```c
 if (analogVal >= 500 && analogVal <= 700)
 {
@@ -207,11 +205,11 @@ There's a lot going on here, so let's break it down; the code is controlling the
 
 **Green LED**
 
-We begin by reading the analog value on pin A5 and setting it to the variable `analogVal`; you'll notice it's hooked up to the trimpot, so as you adjust it, the `analogVal` will change.  Then we encouter our `if` statement; it's setup to turn the green led (pin `ledG`) ON if the `analogVal` is larger than or equal to 300; otherwise it will turn it off.  So far so good.
+We begin by reading the analog value on pin A5 and setting it to the variable `analogVal`; you'll notice it's hooked up to the trimpot, so as you adjust it, the `analogVal` will change.  Then we encounter our `if` statement; it's setup to turn the green led (pin `ledG`) ON if the `analogVal` is larger than or equal to 300; otherwise it will turn it off.  So far so good.
 
 **Red LED**
 
-The red LED is a bit more complicated.  We are using PWD (`analogWrite()`) to set the brightness with a variable named `brigthness`.  On our first loop, `brightness` is 0; however, on each loop we adjust the `brigthness` value by adding `fadeAmount` (which equals 5) to it.  BUT! If the `brigthness` is larger than 255 (or less than 0) then we change `fadeAmount` to be the negative of itself.  So, when `fadeAmount` is 5, it would change to -5 and *vice a versa*. What this means, is that on every loop, we change the `brightness` value and thus the PWM duty and thus the brightness of the red LED.
+The red LED is a bit more complicated.  We are using PWD (`analogWrite()`) to set the brightness with a variable named `brightness`.  On our first loop, `brightness` is 0; however, on each loop we adjust the `brightness` value by adding `fadeAmount` (which equals 5) to it.  BUT! If the `brightness` is larger than 255 (or less than 0) then we change `fadeAmount` to be the negative of itself.  So, when `fadeAmount` is 5, it would change to -5 and *vice a versa*. What this means, is that on every loop, we change the `brightness` value and thus the PWM duty and thus the brightness of the red LED.
 
 Practically, what this all means is, you should see the red LED slowly getting brighter and then fading AND depending on the value for `analogVal` the green LED will be on or off.  This way you can mix colors!  AND! the blue LED is hooked up to the push button switch so you can manually control it.
 
